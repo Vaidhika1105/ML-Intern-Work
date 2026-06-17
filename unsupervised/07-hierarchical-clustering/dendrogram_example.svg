@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" font-family="Helvetica, Arial, sans-serif">
+  <rect x="0" y="0" width="760" height="320" fill="#ffffff"/>
+
+  <!-- leaves -->
+  <line x1="80"  y1="260" x2="80"  y2="220" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="180" y1="260" x2="180" y2="190" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="320" y1="260" x2="320" y2="150" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="420" y1="260" x2="420" y2="110" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="560" y1="260" x2="560" y2="80"  stroke="#2c5fa8" stroke-width="2"/>
+
+  <!-- merge A+B at height 220 -->
+  <line x1="80" y1="220" x2="180" y2="220" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="130" y1="220" x2="130" y2="190" stroke="#2c5fa8" stroke-width="2"/>
+
+  <!-- merge (AB)+C at height 150 -->
+  <line x1="130" y1="190" x2="180" y2="190" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="130" y1="190" x2="130" y2="150" stroke="none"/>
+  <line x1="130" y1="150" x2="320" y2="150" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="225" y1="150" x2="225" y2="120" stroke="#2c5fa8" stroke-width="2"/>
+
+  <!-- merge D into the group at height 110 -->
+  <line x1="225" y1="120" x2="420" y2="120" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="322" y1="120" x2="322" y2="110" stroke="none"/>
+  <line x1="322" y1="110" x2="420" y2="110" stroke="none"/>
+  <line x1="322" y1="110" x2="322" y2="90" stroke="#2c5fa8" stroke-width="2"/>
+
+  <!-- final merge with E at height 80 -->
+  <line x1="322" y1="90" x2="560" y2="90" stroke="#2c5fa8" stroke-width="2"/>
+  <line x1="441" y1="90" x2="441" y2="80" stroke="#2c5fa8" stroke-width="2"/>
+
+  <!-- leaf labels -->
+  <text x="80"  y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c2b39">A</text>
+  <text x="180" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c2b39">B</text>
+  <text x="320" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c2b39">C</text>
+  <text x="420" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c2b39">D</text>
+  <text x="560" y="280" text-anchor="middle" font-size="13" font-weight="bold" fill="#1c2b39">E</text>
+
+  <!-- cut line -->
+  <line x1="40" y1="130" x2="640" y2="130" stroke="#c0392b" stroke-width="2" stroke-dasharray="6,5"/>
+  <text x="650" y="134" font-size="12" fill="#c0392b" font-weight="bold">cut height</text>
+  <text x="650" y="150" font-size="11" fill="#5a6b7a">→ 2 clusters: {A,B,C} and {D,E}</text>
+
+  <!-- axis -->
+  <line x1="40" y1="60" x2="40" y2="260" stroke="#888" stroke-width="1"/>
+  <text x="20" y="65" font-size="11" fill="#5a6b7a" transform="rotate(-90 20 65)">distance ↑</text>
+</svg>
