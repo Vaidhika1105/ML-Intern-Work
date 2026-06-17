@@ -2,7 +2,7 @@
 
 > **"Many imperfect trees, one powerful forest."**
 
-You will learn how Random Forest builds an ensemble of decision trees using bootstrapped data and random feature selection to produce a model that generalizes far better than any single tree. You will understand the underlying math, the mechanics of training and prediction, when to use it in production, and how to confidently answer it in a FAANG interview.
+You will learn how Random Forest builds an ensemble of decision trees using bootstrapped data and random feature selection to produce a model that generalizes far better than any single tree. You will understand the underlying math, the mechanics of training and prediction, and when to use it in production.
 
 ---
 
@@ -290,43 +290,6 @@ As $B \to \infty$, the $\rho\sigma^2$ floor remains. Reducing $\rho$ (via random
 | **Handles missing values?** | Not natively in sklearn; requires imputation or use of LightGBM/XGBoost |
 | **Interpretability** | Moderate — feature importance available; full explanation requires SHAP |
 | **Parallelizable?** | Yes — trees are independent; use `n_jobs=-1` |
-
----
-
-## 9. Architecture / Flow Diagram
-
-```
-Training Data (n samples, p features)
-          │
-          ▼
-┌─────────────────────────────────────────────────────────┐
-│              BOOTSTRAP + FEATURE SAMPLING               │
-│                                                         │
-│  Bootstrap₁     Bootstrap₂     …     Bootstrapᴮ        │
-│  (n samples,    (n samples,          (n samples,        │
-│   with repl.)    with repl.)          with repl.)       │
-└────────┬──────────────┬──────────────────┬──────────────┘
-         │              │                  │
-         ▼              ▼                  ▼
-      Tree₁          Tree₂    …         Treeᴮ
-   (m features     (m features        (m features
-    per split)      per split)         per split)
-         │              │                  │
-         └──────────────┴──────────────────┘
-                         │
-                         ▼
-              AGGREGATION LAYER
-         ┌───────────────────────────┐
-         │  Classification: Majority │
-         │  vote across B trees      │
-         │                           │
-         │  Regression: Mean of B    │
-         │  predicted values         │
-         └───────────────────────────┘
-                         │
-                         ▼
-                  Final Prediction
-```
 
 ---
 

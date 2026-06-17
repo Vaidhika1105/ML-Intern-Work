@@ -41,27 +41,6 @@ Before diving into any topic, you should be comfortable with:
 
 ---
 
-## 🎯 Learning Path
-
-```
-Decision Trees
-      │
-      ├─── 01-Bagging ─── 02-Random Forest
-      │                          │
-      │                  (combines bagging +
-      │                   random feature subspace)
-      │
-      └─── 03-Boosting (sequential; different paradigm)
-```
-
-**Two fundamentally different approaches to ensembling:**
-- **Bagging/RF** → parallel, reduces **variance**, independent learners
-- **Boosting** → sequential, reduces **bias**, error-correcting learners
-
-Understanding *why* they differ is the single most important insight for ML interviews.
-
----
-
 ## 📊 Comparison at a Glance
 
 | Property | Bagging | Random Forest | Boosting |
@@ -76,24 +55,7 @@ Understanding *why* they differ is the single most important insight for ML inte
 
 ---
 
-## 📁 Repository Structure
-
-```
-ensemble-methods/
-├── 01-bagging/
-│   ├── bagging.ipynb      # Notebook: from-scratch + sklearn Bagging
-│   └── README.md          # Bagging guide
-├── 02-random-forest/
-│   ├── README.md          # Random Forest guide
-├── 03-boosting/
-│   ├── boosting.ipynb     # Notebook: AdaBoost + GBM + XGBoost
-│   └── README.md          # Boosting guide
-└── README.md              # ← You are here
-```
-
----
-
-## 📖 How to Use This Resource
+##  How to Use This Resource
 
 1. **Start with the README** for a topic — it gives the full picture: intuition, math, assumptions, interview prep.
 2. **Open the Jupyter notebook** to see working code — from-scratch implementations build understanding; library code shows production practice.
@@ -110,7 +72,3 @@ ensemble-methods/
 | [ISLR: Introduction to Statistical Learning](https://www.statlearning.com/) | Clear, math-light textbook covering all three topics |
 | [ESL: Elements of Statistical Learning](https://hastie.su.domains/ElemStatLearn/) | The authoritative reference (more mathematical) |
 | [Scikit-Learn Ensemble Docs](https://scikit-learn.org/stable/modules/ensemble.html) | Official library documentation |
-
----
-
-*Prepared for MIT ML curriculum and FAANG interview preparation. All equations are final-form. Code is production-oriented with proper train/test splits.*

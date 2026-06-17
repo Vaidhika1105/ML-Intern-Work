@@ -2,7 +2,7 @@
 
 > **Turning a crowd of mediocre guessers into one expert — sequentially.**
 
-You will understand how Boosting builds powerful predictive models by chaining together many weak learners, each one correcting the mistakes of the last. You will be able to explain the intuition, apply the key equations, tune industry-grade implementations, and answer FAANG-level interview questions with confidence.
+You will understand how Boosting builds powerful predictive models by chaining together many weak learners, each one correcting the mistakes of the last. You will be able to explain the intuition, apply the key equations, and tune industry-grade implementations.
 
 ---
 
